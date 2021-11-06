@@ -1,14 +1,14 @@
 'use strict';
 
-// 1. this in the Global Scope
+// 1. The value of "this" in the Global Scope
 console.log(this);
 // (this = Window-Object)
 
-// 2. this value in Regular Functions
+// 2. The value of "this" in Regular Functions
 const regularFun = function () {
 	console.log(this);
-	// Regular Functions has access to (this)
-	// (this = undefined) in (strict mode) Otherwise, (this = Window-Object)
+	// Regular Functions have access to (this)
+	// (this = undefined) in 'strict mode' Otherwise, (this = Window-Object)
 };
 regularFun();
 
@@ -21,16 +21,15 @@ const arrow = () => {
 };
 arrow();
 
-// 4. this value in Event listener passed function
+// 4. The value of "this" within the event handler
 const h1 = document.querySelector('h1');
 h1.addEventListener('click', function () {
 	console.log(this);
 	// this = Dom Element that the handler attached to
 });
 
-// 5. this value in Object Method
+// 5. this value in Object Methods
 const obj = {
-	firstName: 'Mahmoud',
 	method() {
 		console.log(this);
 		// this = Object calling the method
