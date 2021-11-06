@@ -5,16 +5,16 @@ console.log(this);
 
 const regularFun = function () {
 	console.log(this);
-	// Regular Functions has it's own (this)
+	// Regular Functions has access to (this)
 	// (this = undefined) in (strict mode) Otherwise, (this = Window-Object)
 };
 regularFun();
 
 const arrow = () => {
 	console.log(this);
-	// Arrow Functions doesn't have it's own (this)
+	// Arrow Functions doesn't have access to (this)
 	// arrow function takes (this) value from parent scope (which is global in this case)
-	// so (this = Window-Object) in this case
+	// so, (this = Window-Object) in this case
 };
 arrow();
 
