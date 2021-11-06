@@ -4,7 +4,7 @@
 console.log(this);
 // (this = Window-Object)
 
-// 2. The value of "this" in Regular Functions
+// 2. The value of "this" Inside Regular Functions
 const regularFun = function () {
 	console.log(this);
 	// Regular Functions have access to (this)
@@ -12,7 +12,7 @@ const regularFun = function () {
 };
 regularFun();
 
-// 3. this value in Arrow Functions
+// 3. The value of "this" Inside Arrow Functions
 const arrow = () => {
 	console.log(this);
 	// Arrow Functions doesn't have access to (this)
@@ -28,7 +28,7 @@ h1.addEventListener('click', function () {
 	// this = Dom Element that the handler attached to
 });
 
-// 5. this value in Object Methods
+// 5. The value of "this" Inside Object Methods
 const obj = {
 	method() {
 		console.log(this);
